@@ -1,0 +1,30 @@
+.website-image {
+    background-color: rgb(34, 25, 88);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    max-width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    .website-image {
+        justify-content: center;
+    }
+}
+img{
+    max-width: 100%;
+}
+/* h1{
+    /* color: white/; */
+    /* font-size: 40px;
+    background-image: url('../images/plant.png');
+    background-size: contain;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+/* }
+.backimage{
+    background-color: white; */
+    /* height: 60px; */
+    /* width: 10px;
+}  */
+

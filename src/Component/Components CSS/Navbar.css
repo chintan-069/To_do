@@ -1,0 +1,135 @@
+/* Navbar.css */
+
+.Nav {
+  background-color: rgb(34, 25, 88);
+  display: flex;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 10px 17px 0px 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.Nav2 {
+  justify-content: space-around;
+  margin-left: 20px; /* Adjust margin for mobile screens */
+  display: flex;
+  flex-direction: row;
+}
+
+.App-logo {
+  height: auto; /* Set height to auto to maintain aspect ratio */
+  width: 50px; /* Initial width for desktop screens */
+  margin-right: 10px; /* Add margin for spacing */
+  cursor: pointer;
+}
+
+.Nav-items {
+  display: flex;
+  flex-wrap: wrap;
+  text-decoration: none;
+  background-color: rgb(34, 25, 88);
+  color: #ffffff;
+  width: 100px;
+  margin: 0px 0px 15px 0px;
+}
+.toggle-button{
+  transition: all 0.9s ease;
+  /* background: red; */
+}
+
+.active {
+  color: rgb(122, 211, 244);
+  font-size: large;
+}
+/* //sidebar css open from here */
+.sidebar {
+  width: 250px; /* Adjust width as needed */
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: -250px; /* Start with sidebar offscreen */
+  background-color: #333;
+  transition: all 0.9s ease;
+}
+.cotainer {
+  position: relative;
+}
+.sidebar.open {
+  /* left: 82%; */
+  right: 0%;
+  transition: all 0.5s ease-in-out; /* Slide sidebar into view when open */
+}
+
+
+.sidebar-header {
+  padding: 10px;
+  background-color: #fffcfc;
+}
+.slideInAnimation {
+  animation: slideIn 2s forwards; /* Use the slideIn animation with a duration of 2 seconds */
+}
+.toggle-button {
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  width: 230px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.sidebar-content {
+  padding: 20px;
+  color: #fff;
+}
+
+.sidebar-content ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar-content ul li {
+  padding: 10px 0;
+}
+.sidebar-content ul li a{
+  color :white;
+  text-decoration: none;
+  
+}
+.sidebar-content ul li a:hover{
+  color: rgb(72, 218, 255);
+
+}
+.sidebar-content ul li a:active{
+  color: rgb(29, 128, 143);
+}
+@keyframes slideIn {
+  from {
+    left: -250px; /* Start with sidebar offscreen on the left side */
+  }
+  to {
+    left: 0; /* Slide sidebar into view from the left side */
+  }
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .Nav2 {
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0; 
+    display: none;/* Adjust margin for mobile screens */
+  }
+
+  .Nav-items {
+    width: 100%; /* Full width for mobile screens */
+    margin: 5px 0; /* Adjust margin for mobile screens */
+  }
+
+  .App-logo {
+    width: 40px; /* Reduce width for mobile screens */
+  }
+  
+}
